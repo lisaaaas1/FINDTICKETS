@@ -1,0 +1,38 @@
+﻿<Window x:Class="_342Petryaeva_FINDTICKETS.AdminMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_342Petryaeva_FINDTICKETS"
+        mc:Ignorable="d"
+        Title="AdminMainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Column="2" Grid.Row="0" Content="Добавить рейс" FontSize="18" Width="200" Height="35" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click" Cursor="Hand" Margin="0,15,0,0"/>
+        <Button Grid.Column="2" Grid.Row="0" Content="Удалить рейс" FontSize="18" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click_Delete" Cursor="Hand" Margin="0,60,0,0"/>
+
+        <TextBlock FontSize="20" Grid.ColumnSpan="2" Margin="20,38,0,38">Добро пожаловать на панель администратора</TextBlock>
+        <DataGrid Margin="20" Name="gridFlight" AutoGenerateColumns="False" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="3" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер рейса" Binding="{Binding id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Вылет"  Binding="{Binding Country.name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Прилет"  Binding="{Binding Country1.name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Места"  Binding="{Binding num_of_seats}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Время полета"  Binding="{Binding time_departure}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Тип билета"  Binding="{Binding Ticket_Type.name}"></DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="_342Petryaeva_FINDTICKETS.DeleteFlight"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_342Petryaeva_FINDTICKETS"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <ComboBox Name="cmbIdFlight" DisplayMemberPath="id" Grid.Column="1" Grid.Row="1" BorderThickness="1" Padding="10" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Width="450" Height="35" />
+        <TextBlock Height="50" HorizontalAlignment="Center" FontSize="18" Margin="0,167,0,217"><Run Text="В"/><Run Language="ru-ru" Text="ыбери"/><Run Text="те номер рейса, который хотите удалить"/></TextBlock>
+        <Button Content="Удалить" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Width="150" Height="40" Click="Button_Click_Delete" Margin="0,276,0,0"/>
+    </Grid>
+</Window>

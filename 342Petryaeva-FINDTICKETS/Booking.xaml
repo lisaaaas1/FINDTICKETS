@@ -1,0 +1,31 @@
+﻿<Window x:Class="_342Petryaeva_FINDTICKETS.Booking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_342Petryaeva_FINDTICKETS"
+        mc:Ignorable="d"
+        Title="Booking" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition MaxWidth="250"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Бронирование билета" FontSize="30" FontWeight="Black" VerticalAlignment="Center" Margin="25,0,0,0" />
+
+        <TextBlock Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Top" TextWrapping="Wrap" Text="Выберите тип билета" Width="450" Margin="0,19,0,0"/>
+        <ComboBox Name="cmbTicketType" DisplayMemberPath="name" Grid.Column="1" Grid.Row="2" BorderThickness="1" Padding="10" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Top" Width="450" Height="35" Margin="0,43,0,0" />
+
+        <ComboBox Name="cmbIdFlight" DisplayMemberPath="id" Grid.Column="1" Grid.Row="1" BorderThickness="1" Padding="10" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Width="450" Height="35" />
+        <Button Grid.Column="2" Grid.Row="4" Content="ок" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="40" Click="Button_Click" />
+        <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Top" TextWrapping="Wrap" Text="Выберите номер рейса" Width="450" Margin="0,12,0,0"/>
+
+    </Grid>
+</Window>
